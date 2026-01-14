@@ -1,0 +1,5 @@
+module CShield {
+    header "cshield.h"
+    header "aip.h" 
+    export *
+}
