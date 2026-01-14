@@ -6,13 +6,47 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		12741BF22F17412A005DA035 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		12AAA01A2F0F8BA800D6B7ED /* CShieldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CShieldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B74199718BE8084771F7950 /* Pods-CShieldApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CShieldApp.release.xcconfig"; path = "Target Support Files/Pods-CShieldApp/Pods-CShieldApp.release.xcconfig"; sourceTree = "<group>"; };
+		B2907DCA470E3926B68410B7 /* Pods_CShieldApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CShieldApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDEFFB7538FBA237A4D2870B /* Pods-CShieldApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CShieldApp.debug.xcconfig"; path = "Target Support Files/Pods-CShieldApp/Pods-CShieldApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		12B1746C2F174177003334EB /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				SDKCShield/CShield.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				SDKCShield/OpenSSL.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 12741BF22F17412A005DA035 /* Embed Frameworks */;
+			membershipExceptions = (
+				SDKCShield/CShield.xcframework,
+				SDKCShield/OpenSSL.xcframework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		12AAA01C2F0F8BA800D6B7ED /* CShieldApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				12B1746C2F174177003334EB /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */,
+			);
 			path = CShieldApp;
 			sourceTree = "<group>";
 		};
@@ -33,7 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				12AAA01C2F0F8BA800D6B7ED /* CShieldApp */,
+				12EB6CAD2F164D150059779F /* Frameworks */,
 				12AAA01B2F0F8BA800D6B7ED /* Products */,
+				FCAA0150457E285A8A772DCF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +81,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		12EB6CAD2F164D150059779F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2907DCA470E3926B68410B7 /* Pods_CShieldApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCAA0150457E285A8A772DCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDEFFB7538FBA237A4D2870B /* Pods-CShieldApp.debug.xcconfig */,
+				7B74199718BE8084771F7950 /* Pods-CShieldApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12AAA0282F0F8BA900D6B7ED /* Build configuration list for PBXNativeTarget "CShieldApp" */;
 			buildPhases = (
+				E8D2955F55DF358816737BED /* [CP] Check Pods Manifest.lock */,
 				12AAA0162F0F8BA800D6B7ED /* Sources */,
 				12AAA0172F0F8BA800D6B7ED /* Frameworks */,
 				12AAA0182F0F8BA800D6B7ED /* Resources */,
+				12741BF22F17412A005DA035 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +119,6 @@
 				12AAA01C2F0F8BA800D6B7ED /* CShieldApp */,
 			);
 			name = CShieldApp;
-			packageProductDependencies = (
-			);
 			productName = CShieldApp;
 			productReference = 12AAA01A2F0F8BA800D6B7ED /* CShieldApp.app */;
 			productType = "com.apple.product-type.application";
@@ -82,6 +135,7 @@
 				TargetAttributes = {
 					12AAA0192F0F8BA800D6B7ED = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
@@ -113,6 +167,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E8D2955F55DF358816737BED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CShieldApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12AAA0162F0F8BA800D6B7ED /* Sources */ = {
@@ -179,6 +258,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -236,6 +316,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -246,28 +327,48 @@
 		};
 		12AAA0292F0F8BA900D6B7ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDEFFB7538FBA237A4D2870B /* Pods-CShieldApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_STANDARD_LIBRARY_HARDENING = fast;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CShieldApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "CShieldApp/Preview\\ Content/Preview\\ Assets.xcassets CShieldApp/Assets.xcassets CShieldApp/Resources";
 				DEVELOPMENT_TEAM = 873GZ4J6LK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/homebrew/Cellar/openssl@3/3.6.0/lib",
+					"/opt/homebrew/Cellar/openssl@3/3.6.0/include",
+				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobileCS.CShieldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CShieldApp/cpp/CShieldApp-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -275,28 +376,47 @@
 		};
 		12AAA02A2F0F8BA900D6B7ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B74199718BE8084771F7950 /* Pods-CShieldApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_STANDARD_LIBRARY_HARDENING = fast;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CShieldApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "CShieldApp/Preview\\ Content/Preview\\ Assets.xcassets CShieldApp/Assets.xcassets CShieldApp/Resources";
 				DEVELOPMENT_TEAM = 873GZ4J6LK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/homebrew/Cellar/openssl@3/3.6.0/lib",
+					"/opt/homebrew/Cellar/openssl@3/3.6.0/include",
+				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobileCS.CShieldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CShieldApp/cpp/CShieldApp-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
