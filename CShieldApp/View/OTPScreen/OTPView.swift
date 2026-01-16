@@ -61,7 +61,7 @@ struct OTPView: View {
             
             
             Button(action: {
-                viewModel.example()
+                
                 
             }) {
                 Text("sign payload")

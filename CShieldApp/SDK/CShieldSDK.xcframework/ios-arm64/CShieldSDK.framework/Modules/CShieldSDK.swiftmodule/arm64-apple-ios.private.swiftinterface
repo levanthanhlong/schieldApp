@@ -1,0 +1,31 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -cxx-interoperability-mode=default -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name CShieldSDK
+import CShield
+@_exported import CShieldSDK
+import CommonCrypto
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objcMembers public class CShieldInterceptor {
+  @objc public init()
+  public func intercept(request: inout Foundation.URLRequest, completion: @escaping (Foundation.URLRequest?, (any Swift.Error)?) -> Swift.Void)
+  @objc public func interceptResponse(response: Foundation.URLResponse, data: Foundation.Data, mode: Swift.Int) -> Foundation.Data?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CShieldSDK : ObjectiveC.NSObject {
+  @objc public static func isSimulator() -> Swift.Bool
+  @objc public static func isDebuggerDetected() -> Swift.Bool
+  @objc public static func detectTampering(expectedTeamID: Swift.String, expectedBundleID: Swift.String, expectedExeHashHex: Swift.String) -> Swift.Int32
+  @objc public static func detectTamperingDebug(expectedTeamID: Swift.String, expectedBundleID: Swift.String, expectedExeHashHex: Swift.String)
+  @objc public static func jailbreakCheck() -> Swift.UInt32
+  @objc public static func isJailbroken() -> Swift.Bool
+  @objc public static func sign(payload: Swift.String) -> Swift.String
+  @objc public static func verify(payload: Swift.String, signature: Swift.String) -> Swift.Bool
+  @objc public static func freeCString(cString: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}

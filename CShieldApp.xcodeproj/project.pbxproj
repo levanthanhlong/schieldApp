@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
-		12741BF22F17412A005DA035 /* Embed Frameworks */ = {
+		124BD88B2F19D67600A5B64F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -20,23 +20,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		124BD8AD2F1A1D4B00A5B64F /* CShieldSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CShieldSDK.xcframework; path = ../swift/CShieldSDK/build/CShieldSDK.xcframework; sourceTree = "<group>"; };
 		12AAA01A2F0F8BA800D6B7ED /* CShieldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CShieldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B74199718BE8084771F7950 /* Pods-CShieldApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CShieldApp.release.xcconfig"; path = "Target Support Files/Pods-CShieldApp/Pods-CShieldApp.release.xcconfig"; sourceTree = "<group>"; };
-		B2907DCA470E3926B68410B7 /* Pods_CShieldApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CShieldApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEFFB7538FBA237A4D2870B /* Pods-CShieldApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CShieldApp.debug.xcconfig"; path = "Target Support Files/Pods-CShieldApp/Pods-CShieldApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		12B1746C2F174177003334EB /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */ = {
+		124BD88C2F19D67600A5B64F /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				SDKCShield/CShield.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
-				SDKCShield/OpenSSL.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				SDK/CShield.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				SDK/CShieldSDK.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				SDK/OpenSSL.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
 			};
-			buildPhase = 12741BF22F17412A005DA035 /* Embed Frameworks */;
+			buildPhase = 124BD88B2F19D67600A5B64F /* Embed Frameworks */;
 			membershipExceptions = (
-				SDKCShield/CShield.xcframework,
-				SDKCShield/OpenSSL.xcframework,
+				SDK/CShield.xcframework,
+				SDK/CShieldSDK.xcframework,
+				SDK/OpenSSL.xcframework,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -45,7 +47,7 @@
 		12AAA01C2F0F8BA800D6B7ED /* CShieldApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				12B1746C2F174177003334EB /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */,
+				124BD88C2F19D67600A5B64F /* Exceptions for "CShieldApp" folder in "Embed Frameworks" phase from "CShieldApp" target */,
 			);
 			path = CShieldApp;
 			sourceTree = "<group>";
@@ -84,7 +86,7 @@
 		12EB6CAD2F164D150059779F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2907DCA470E3926B68410B7 /* Pods_CShieldApp.framework */,
+				124BD8AD2F1A1D4B00A5B64F /* CShieldSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,7 +111,7 @@
 				12AAA0162F0F8BA800D6B7ED /* Sources */,
 				12AAA0172F0F8BA800D6B7ED /* Frameworks */,
 				12AAA0182F0F8BA800D6B7ED /* Resources */,
-				12741BF22F17412A005DA035 /* Embed Frameworks */,
+				124BD88B2F19D67600A5B64F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,8 +349,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,8 +397,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

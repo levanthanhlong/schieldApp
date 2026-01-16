@@ -1,0 +1,6 @@
+framework module CShieldSDK {
+  umbrella header "CShieldSDK.h"
+  export *
+
+  module * { export * }
+}

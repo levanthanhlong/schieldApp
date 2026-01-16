@@ -1,0 +1,629 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "CShieldSDK",
+    "printedName": "CShieldSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CShield",
+        "printedName": "CShield",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CShieldInterceptor",
+        "printedName": "CShieldInterceptor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CShieldInterceptor",
+                "printedName": "CShieldSDK.CShieldInterceptor",
+                "usr": "s:10CShieldSDK0A11InterceptorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10CShieldSDK0A11InterceptorCACycfc",
+            "mangledName": "$s10CShieldSDK0A11InterceptorCACycfc",
+            "moduleName": "CShieldSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "intercept",
+            "printedName": "intercept(request:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "paramValueOwnership": "InOut",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.URLRequest?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.URLRequest?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.URLRequest?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLRequest",
+                            "printedName": "Foundation.URLRequest",
+                            "usr": "s:10Foundation10URLRequestV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CShieldSDK0A11InterceptorC9intercept7request10completiony10Foundation10URLRequestVz_yAISg_s5Error_pSgtctF",
+            "mangledName": "$s10CShieldSDK0A11InterceptorC9intercept7request10completiony10Foundation10URLRequestVz_yAISg_s5Error_pSgtctF",
+            "moduleName": "CShieldSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "interceptResponse",
+            "printedName": "interceptResponse(response:data:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLResponse",
+                "printedName": "Foundation.URLResponse",
+                "usr": "c:objc(cs)NSURLResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CShieldSDK0A11InterceptorC17interceptResponse8response4data4mode10Foundation4DataVSgSo13NSURLResponseC_AJSitF",
+            "mangledName": "$s10CShieldSDK0A11InterceptorC17interceptResponse8response4data4mode10Foundation4DataVSgSo13NSURLResponseC_AJSitF",
+            "moduleName": "CShieldSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10CShieldSDK0A11InterceptorC",
+        "mangledName": "$s10CShieldSDK0A11InterceptorC",
+        "moduleName": "CShieldSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CShield",
+        "printedName": "CShield",
+        "declKind": "Import",
+        "moduleName": "CShieldSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CShieldSDK",
+        "printedName": "CShieldSDK",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "isSimulator",
+            "printedName": "isSimulator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)isSimulator",
+            "mangledName": "$s10CShieldSDKAAC11isSimulatorSbyFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isDebuggerDetected",
+            "printedName": "isDebuggerDetected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)isDebuggerDetected",
+            "mangledName": "$s10CShieldSDKAAC18isDebuggerDetectedSbyFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "detectTampering",
+            "printedName": "detectTampering(expectedTeamID:expectedBundleID:expectedExeHashHex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)detectTamperingWithExpectedTeamID:expectedBundleID:expectedExeHashHex:",
+            "mangledName": "$s10CShieldSDKAAC15detectTampering14expectedTeamID0e6BundleG00E10ExeHashHexs5Int32VSS_S2StFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "detectTamperingDebug",
+            "printedName": "detectTamperingDebug(expectedTeamID:expectedBundleID:expectedExeHashHex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)detectTamperingDebugWithExpectedTeamID:expectedBundleID:expectedExeHashHex:",
+            "mangledName": "$s10CShieldSDKAAC20detectTamperingDebug14expectedTeamID0f6BundleH00F10ExeHashHexySS_S2StFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "jailbreakCheck",
+            "printedName": "jailbreakCheck()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)jailbreakCheck",
+            "mangledName": "$s10CShieldSDKAAC14jailbreakChecks6UInt32VyFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isJailbroken",
+            "printedName": "isJailbroken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)isJailbroken",
+            "mangledName": "$s10CShieldSDKAAC12isJailbrokenSbyFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)signWithPayload:",
+            "mangledName": "$s10CShieldSDKAAC4sign7payloadS2S_tFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verify",
+            "printedName": "verify(payload:signature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)verifyWithPayload:signature:",
+            "mangledName": "$s10CShieldSDKAAC6verify7payload9signatureSbSS_SStFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "freeCString",
+            "printedName": "freeCString(cString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(cm)freeCStringWithCString:",
+            "mangledName": "$s10CShieldSDKAAC11freeCString7cStringySS_tFZ",
+            "moduleName": "CShieldSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CShieldSDK",
+                "printedName": "CShieldSDK.CShieldSDK",
+                "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK(im)init",
+            "mangledName": "$s10CShieldSDKAACABycfc",
+            "moduleName": "CShieldSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CShieldSDK@objc(cs)CShieldSDK",
+        "mangledName": "$s10CShieldSDKAAC",
+        "moduleName": "CShieldSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

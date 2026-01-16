@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CShield
+import CShieldSDK
 
 struct ContentView: View {
     
@@ -166,20 +166,20 @@ extension ContentView {
 extension ContentView {
     
     func runRuntimeCheck() {
-        simulator = simulatorDetector()
-        debugger = debuggerDetector()
+        simulator = CShieldSDK.isSimulator()
+        debugger = CShieldSDK.isDebuggerDetected()
     }
     
     func runJailbreakCheck() {
-        jailbreakMask = jailbreakDetectorCheck()
-        jailbreakDetected = jailbreakDetector()
+        jailbreakMask = CShieldSDK.jailbreakCheck()
+        jailbreakDetected = CShieldSDK.isJailbroken()
     }
     
     func runTamperCheck() {
-        let result = temperingDetector(
-            expectedTeamID,
-            expectedBundleID,
-            expectedExeHash.isEmpty ? nil : expectedExeHash
+        let result = CShieldSDK.detectTampering(
+            expectedTeamID: expectedTeamID,
+            expectedBundleID: expectedBundleID,
+            expectedExeHashHex: expectedExeHash.isEmpty ? "" : expectedExeHash
         )
         
         if result == 1 {
@@ -189,10 +189,10 @@ extension ContentView {
         }
         
         // debug log native (NSLog trong SDK)
-        temperingDetectorDebug(
-            expectedTeamID,
-            expectedBundleID,
-            expectedExeHash.isEmpty ? nil : expectedExeHash
+        CShieldSDK.detectTamperingDebug(
+            expectedTeamID: expectedTeamID,
+            expectedBundleID: expectedBundleID,
+            expectedExeHashHex: expectedExeHash.isEmpty ? "" : expectedExeHash
         )
     }
 }
